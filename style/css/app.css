@@ -1,29 +1,15 @@
-@use './variables';
+@charset "UTF-8";
+:root {
+  --primaryColor: #47cfac;
+  --blanco: #ececec;
+  --negro: #393939;
+  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-secundaria: Verdana;
+}
 
 /* Definimos las Custom properties */
-:root{
-  // /* Colores */
-  // $blanco: #ececec;
-  // $negro: #393939;
-  
-  // /* Tipografía */
-  // $tipo-principal   : Helvetica, Arial, sans-serif;
-  // $tipo-secundaria  : Verdana;
-}
-  
 /* (Opcional) Las adaptamos al modo oscuro */
-@media (prefers-color-scheme: dark) {
-  :root{
-    $blanco: #393939;
-    $negro: #ececec;
-  }
-}
-
 /* (Opcional) Configuramos si un usuario ha activado el modo alto contraste. (WD) */
-@media (prefers-contrast: high){
-  :root{}
-}
-
 /* (Opcional) Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -31,26 +17,24 @@
     transition: none !important;
   }
 }
-
 /* Reseteamos los margin y paddings de todas las etiquetas */
-* , *::before , *::after{
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
   vertical-align: baseline;
 }
-*::before , *::after{
+
+*::before, *::after {
   display: block;
 }
 
 /* Evitamos problemas con las imagenes */
-img , picture , video , iframe , figure{
+img, picture, video, iframe, figure {
   max-width: 100%;
   width: 100%;
   display: block;
-  // /* (Opcional) */ object-fit: cover;        
-  // /* (Opcional) */ object-position: center center;
 }
 
 /* Reseteamos los enlaces para funcionar como cajas... */
@@ -60,6 +44,7 @@ a {
   color: inherit;
   font-size: inherit;
 }
+
 /* ... excepto los que se encuentran en párrafos */
 p a {
   display: inline;
@@ -77,16 +62,17 @@ html {
 }
 
 /* Desactivamos estilos por defecto de las principales etiquetas de texto */
-h1 , h2 , h3 , h4 , h5 , h6 , p ,span , a , strong , blockquote , i , b , u , em {
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
   font-size: inherit;
   font-weight: inherit;
   font-style: inherit;
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
+
 /* Evitamos problemas con los pseudoelementos de quotes */
 blockquote:before, blockquote:after, q:before, q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -97,18 +83,17 @@ blockquote:before, blockquote:after, q:before, q:after {
 }
 
 /* Nivelamos problemas de tipografías y colocación de formularios */
-form , input, textarea, select , button , label {
+form, input, textarea, select, button, label {
   font-family: inherit;
   font-size: inherit;
   hyphens: auto;
   background-color: transparent;
-  color:inherit;
+  color: inherit;
   display: block;
-  // /* (Opcional) */ appearance: none;
 }
 
 /* Reseteamos las tablas */
-table , tr , td {
+table, tr, td {
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -127,12 +112,37 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  min-height  : 100vh;
-  font-size   : 100%;
-  font-family : var(--tipo-principal);
-  color       : var(--negro);
-  // /* (Opcional) */ hyphens: auto;
-  // /* (Opcional) */ font-smooth: always;
-  // /* (Opcional) */ -webkit-font-smoothing: antialiased;
-  // /* (Opcional) */ -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--negro);
 }
+
+header {
+  width: 100%;
+  height: 14rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.social-media {
+  width: 100%;
+  height: 5rem;
+  display: grid;
+  background-color: var(--primaryColor);
+}
+.social-media__container {
+  width: 30rem;
+  height: auto;
+  display: flex;
+  justify-items: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  justify-self: end;
+  margin-right: 5rem;
+}
+.social-media--icon {
+  color: var(--blanco);
+}
+
+/*# sourceMappingURL=app.css.map */
