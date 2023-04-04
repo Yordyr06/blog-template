@@ -3,8 +3,8 @@
 /* Definimos las Custom properties */
 :root{
   // /* Colores */
-  // $blanco: #ececec;
-  // $negro: #393939;
+  // $white: #ececec;
+  // $black: #393939;
   
   // /* Tipografía */
   // $tipo-principal   : Helvetica, Arial, sans-serif;
@@ -14,8 +14,8 @@
 /* (Opcional) Las adaptamos al modo oscuro */
 @media (prefers-color-scheme: dark) {
   :root{
-    $blanco: #393939;
-    $negro: #ececec;
+    $white: #393939;
+    $black: #ececec;
   }
 }
 
@@ -92,8 +92,8 @@ blockquote:before, blockquote:after, q:before, q:after {
 
 /* (Opcional) Configuramos el texto que seleccionamos */
 ::selection {
-  background-color: var(--negro);
-  color: var(--blanco);
+  background-color: $black;
+  color: $white;
 }
 
 /* Nivelamos problemas de tipografías y colocación de formularios */
@@ -129,8 +129,8 @@ body {
   right: 0;
   min-height  : 100vh;
   font-size   : 100%;
-  font-family : var(--tipo-principal);
-  color       : var(--negro);
+  font-family : $tipo-principal;
+  color       : $black;
   // /* (Opcional) */ hyphens: auto;
   // /* (Opcional) */ font-smooth: always;
   // /* (Opcional) */ -webkit-font-smoothing: antialiased;

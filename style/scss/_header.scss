@@ -11,7 +11,7 @@ header {
   width: 100%;
   height: 5rem;
   display: grid;
-  background-color: var(--primaryColor);
+  background-color: $primaryColor;
 
   &__container {
     width: 30rem;
@@ -25,6 +25,34 @@ header {
   }
 
   &--icon {
-    color: var(--blanco);
+    color: $white;
   }
 }
+
+.nav-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 9rem;
+
+  &--logo {
+    margin-left: 5rem;
+  }
+
+  &--profile-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 5rem;
+
+    & img {
+      width: 22rem;
+      margin-top: 1rem;
+    }
+
+    & a {
+      color: $black;
+      border-bottom: 1px solid $black;
+    }
+  }
+}
+
