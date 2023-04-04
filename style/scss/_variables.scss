@@ -1,9 +1,18 @@
 :root {
-  $primaryColor: #47cfac;
-  $white: #ececec;
-  $black: #393939;
+  --primary-color: #47cfac;
+  --white: #ececec;
+  --black: #393939;
 
 
-  $tipo-principal   : Helvetica, Arial, sans-serif;
-  $tipo-secundaria  : Verdana;
+  --tipo-principal   : Helvetica, Arial, sans-serif;
+  --tipo-secundaria  : Verdana;
+}
+
+
+/* (Opcional) Las adaptamos al modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root{
+    --white: #393939;
+    --black: #ececec;
+  }
 }
