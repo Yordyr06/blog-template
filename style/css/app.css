@@ -1,19 +1,15 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;700&family=Roboto+Slab:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap");
 :root {
   --primary-color: #47cfac;
   --white: #ececec;
   --black: #393939;
-  --tipo-principal: Helvetica, Arial, sans-serif;
-  --tipo-secundaria: Verdana;
+  --font-main: "Roboto", sans-serif;
+  --font-secondary: "Roboto Mono", monospace;
+  --font-tertiary: "Roboto Slab", serif;
 }
 
 /* (Opcional) Las adaptamos al modo oscuro */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --white: #393939;
-    --black: #ececec;
-  }
-}
 /* Definimos las Custom properties */
 /* (Opcional) Configuramos si un usuario ha activado el modo alto contraste. (WD) */
 /* (Opcional) Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
@@ -120,7 +116,7 @@ body {
   right: 0;
   min-height: 100vh;
   font-size: 100%;
-  font-family: var(--tipo-principal);
+  font-family: var(--font-main);
   color: var(--black);
 }
 
@@ -170,8 +166,46 @@ header {
   margin-right: 5rem;
 }
 .nav-container--profile-link a {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
   color: var(--black);
   border-bottom: 1px solid var(--black);
+}
+
+.home-main {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  height: 100%;
+  background-image: url("/assets/img/cover.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home-main__container {
+  display: grid;
+  grid-column: 2;
+  justify-items: center;
+  align-items: center;
+  height: 35rem;
+  margin-top: 10rem;
+}
+.home-main--tittle {
+  font-size: 3.4rem;
+  line-height: 3.6rem;
+  font-weight: 500;
+  letter-spacing: 1rem;
+  text-align: center;
+  color: var(--white);
+}
+.home-main--button {
+  width: 11rem;
+  height: 5rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  background-color: var(--primary-color);
 }
 
 /*# sourceMappingURL=app.css.map */
