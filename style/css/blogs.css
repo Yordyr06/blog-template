@@ -1,0 +1,175 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;700&family=Roboto+Slab:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap");
+:root {
+  --primary-color: #47cfac;
+  --white: #ececec;
+  --black: #393939;
+  --font-main: "Roboto", sans-serif;
+  --font-secondary: "Roboto Mono", monospace;
+  --font-tertiary: "Roboto Slab", serif;
+}
+
+/* (Opcional) Las adaptamos al modo oscuro */
+/* Definimos las Custom properties */
+/* (Opcional) Configuramos si un usuario ha activado el modo alto contraste. (WD) */
+/* (Opcional) Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+  display: block;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: inline;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* (Opcional) Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* (Opcional) Configuramos el texto que seleccionamos */
+::selection {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--font-main);
+  color: var(--black);
+}
+
+header {
+  width: 100%;
+  height: 14rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.social-media {
+  width: 100%;
+  height: 5rem;
+  display: grid;
+  background-color: var(--primary-color);
+}
+.social-media__container {
+  width: 30rem;
+  height: auto;
+  display: flex;
+  justify-items: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  justify-self: end;
+  margin-right: 5rem;
+}
+.social-media--icon {
+  color: var(--white);
+}
+
+.nav-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 9rem;
+}
+.nav-container--logo {
+  margin-left: 5rem;
+}
+.nav-container--logo img {
+  width: 22rem;
+  margin-top: 1rem;
+}
+.nav-container--profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 5rem;
+}
+.nav-container--profile-link a {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  color: var(--black);
+  border-bottom: 1px solid var(--black);
+}
+
+/*# sourceMappingURL=blogs.css.map */
