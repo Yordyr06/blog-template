@@ -4,6 +4,7 @@
   --primary-color: #47cfac;
   --white: #ececec;
   --black: #393939;
+  --deep-black: #22272d;
   --font-main: "Roboto", sans-serif;
   --font-secondary: "Roboto Mono", monospace;
   --font-tertiary: "Roboto Slab", serif;
@@ -109,14 +110,9 @@ svg {
 
 /* Configuramos la tipografía para toda la web */
 body {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   min-height: 100vh;
   font-size: 100%;
-  font-family: var(--font-main);
+  font-family: var(--font-secondary);
   color: var(--black);
 }
 
@@ -172,6 +168,15 @@ header {
   border-bottom: 1px solid var(--black);
 }
 
+body {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: var(--font-main);
+}
+
 .home-main {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
@@ -198,8 +203,9 @@ header {
   color: var(--white);
 }
 .home-main--button {
-  width: 11rem;
+  width: 15rem;
   height: 5rem;
+  padding: 1rem;
   border: none;
   border-radius: 0.8rem;
   font-size: 2rem;

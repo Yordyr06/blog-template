@@ -1,4 +1,76 @@
-@use './variables';
+@use './variables' as mixins;
 @use './reset';
 @use './header';
+@use './footer';
 
+.blogs-main {
+  display: grid;
+
+  &__news {
+    background-color: #e6e9ed;
+    padding: 0 5rem 4rem;
+
+    &--main-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: 2fr;
+      @include mixins.grid-container;
+    }
+
+    &--tittle {
+      margin: 2rem 0;
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.8rem;
+    }
+    
+    &--img-container {
+      grid-column: 1;
+
+      & img {
+        width: 85%;
+      }
+    }
+
+    &--info-container {
+      grid-column: 2;
+
+      & h2 {
+        margin: 2rem 0;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2.2rem;
+      }
+      & p {
+        margin-bottom: 3.5rem;
+      }
+    }
+  }
+
+  .blogs-post {
+    padding: 0 5rem 4rem;
+
+    &--tittle {
+      margin-top: 3rem;
+      border-bottom: 0.1rem solid #cdd2da;
+      padding-bottom: 2rem;
+      text-align: center;
+    }
+
+    &__container {
+      display: grid;
+      justify-items: center;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      @include mixins.grid-container;
+
+      .blogs-post--card {
+        @include mixins.blogs-post--card;
+      }
+    }
+  }
+
+  .blogs-button {
+    @include mixins.blogs-button;
+  }
+}
