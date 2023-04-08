@@ -8,7 +8,7 @@
   --deep-black: #22272d;
 
 
-  --font-main: 'Roboto', sans-serif;;
+  --font-main: 'Roboto', sans-serif;
   --font-secondary: 'Roboto Mono', monospace;;
   --font-tertiary: 'Roboto Slab', serif;
 }
@@ -58,4 +58,49 @@
 @mixin grid-container {
   max-width: 98rem;
   margin: auto;
+}
+
+@mixin contact {
+  width: 100%;
+  min-height: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #cdd2da;
+  padding-bottom: 7rem;
+  gap: 1rem;
+
+  .contact--left {
+    grid-column: 1 / 2;
+  }
+
+  .contact--rigth {
+    grid-column: 2 / 3;
+  }
+
+  .contact--left, .contact--rigth {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr ;
+    text-align: initial;
+    margin-top: 3rem;
+
+    
+    img {
+      width: 5rem;
+      justify-self: end;
+    }
+
+    div {
+      display: inline-block;
+      margin-left: 1rem;
+      padding-top: 0.5rem;
+
+      a {
+        border-bottom: 0.1rem solid var(--deep-black);
+      }
+
+      p {
+        margin-top: 0.5rem;
+      }
+    }
+  }
 }

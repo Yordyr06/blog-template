@@ -1,0 +1,43 @@
+@use './variables' as mixins;
+@use './reset';
+@use './header';
+@use './footer';
+
+.grid-container {
+  @include mixins.grid-container;
+}
+
+.contact {
+  @include mixins.contact;
+}
+
+.post-main {
+  
+  &--img {
+    padding: 0 5rem 4rem;
+    
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__container {
+    padding: 0 5rem 4rem;
+
+    & h3 {
+      border-bottom: 0.1rem solid #cdd2da;
+      padding-bottom: 2rem;
+    }
+
+    & article {
+      h1 {
+        font-size: 3.5rem;
+        padding: 2rem 0;
+      }
+
+      p {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
