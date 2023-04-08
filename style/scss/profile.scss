@@ -1,0 +1,17 @@
+@use './variables' as mixins;
+@use './reset';
+@use './header';
+@use './footer';
+
+.grid-container{
+  @include mixins.grid-container;
+}
+
+.contact {
+  @include mixins.contact;
+}
+
+.profile-main {}
+.profile-projects {}
+.profile-projects--container {}
+.profile-projects--cards {}
