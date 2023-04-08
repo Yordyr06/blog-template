@@ -222,25 +222,50 @@ header {
   margin-top: 0.5rem;
 }
 
-.post-main--img {
-  padding: 0 5rem 4rem;
+.profile-main {
+  padding: 7rem 4rem;
+  background-color: #cdd2da;
+  margin-bottom: 5rem;
 }
-.post-main--img img {
-  width: 100%;
+.profile-main .profile-main__container {
+  display: flex;
 }
-.post-main__container {
-  padding: 0 5rem 4rem;
+.profile-main .profile-main__container div {
+  margin: 0 1rem;
 }
-.post-main__container h3 {
-  border-bottom: 0.1rem solid #cdd2da;
-  padding-bottom: 2rem;
+.profile-main .profile-main__container div img {
+  width: 32rem;
 }
-.post-main__container article h1 {
-  font-size: 3.5rem;
-  padding: 2rem 0;
-}
-.post-main__container article p {
-  margin-bottom: 2rem;
+.profile-main .profile-main__container div h2 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: 700;
 }
 
-/*# sourceMappingURL=post.css.map */
+.profile-projects {
+  padding: 0 5rem 4rem;
+}
+.profile-projects h3 {
+  font-size: 2rem;
+  line-height: 2.2rem;
+  font-weight: 400;
+  border-bottom: 0.1rem solid #cdd2da;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.profile-projects .profile-projects__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.profile-projects .profile-projects--cards {
+  padding: 1rem;
+}
+.profile-projects .profile-projects--cards h4 {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/*# sourceMappingURL=profile.css.map */

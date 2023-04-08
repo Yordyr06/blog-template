@@ -11,7 +11,50 @@
   @include mixins.contact;
 }
 
-.profile-main {}
-.profile-projects {}
-.profile-projects--container {}
-.profile-projects--cards {}
+.profile-main {
+  padding: 7rem 4rem;
+  background-color: #cdd2da;
+  margin-bottom: 5rem;
+
+  .profile-main__container {
+    display: flex;
+
+    div{
+      margin: 0 1rem;
+
+      img {
+        width: 32rem;
+      }
+
+      h2 {
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.profile-projects {
+  padding: 0 5rem 4rem;
+
+  h3 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+    border-bottom: 0.1rem solid #cdd2da;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  .profile-projects__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+
+  .profile-projects--cards {
+    @include mixins.profile-projects--cards;
+  }
+}

@@ -55,6 +55,17 @@
   }
 }
 
+@mixin profile-projects--cards {
+  padding: 1rem;
+  
+  h4 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+}
+
 @mixin grid-container {
   max-width: 98rem;
   margin: auto;
