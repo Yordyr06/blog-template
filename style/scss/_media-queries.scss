@@ -1,0 +1,39 @@
+@use './variables';
+
+@media (max-width: 600px) {
+  .blogs-post__container {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 900px) {
+  
+  .blogs-main__new{
+    &--main-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 3fr;
+    }
+
+    &--img-container {
+      grid-row: 2;
+    }
+    &--info-container {
+      grid-column: 1;
+      grid-row: 3;
+    }
+  }
+
+  .blogs-post__container {
+    max-width: 45%;
+  }
+
+  .profile-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    &__container {
+      display: block;
+    }
+  }
+}
